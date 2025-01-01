@@ -1,0 +1,10 @@
+[target.thumbv6m-none-eabi]
+rustflags = [
+  "-C", "linker=flip-link",
+  "-C", "no-vectorize-loops",
+]
+runner = "elf2uf2-rs -d"
+
+[build]
+# Cortex-M0 and Cortex-M0+
+target = "thumbv6m-none-eabi"
